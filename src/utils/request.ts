@@ -9,7 +9,7 @@ const request = axios.create({
 // 添加响应拦截器
 request.interceptors.response.use(
     (response) => {
-        return response;
+        return response.data;
     },
     function (error) {
         const messages = error.response.data.message;
